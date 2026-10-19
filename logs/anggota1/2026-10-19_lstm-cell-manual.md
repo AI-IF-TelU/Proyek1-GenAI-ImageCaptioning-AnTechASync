@@ -9,18 +9,27 @@
 
 ---
 
+## KEPUTUSAN & ARAHAN KETUA
+
+- **LSTM ditulis manual**, bukan `nn.LSTM` / `nn.LSTMCell`. Keputusan ini diambil ketua di sesi perencanaan agar implementasi tidak bisa dianggap memakai model jadi:
+  > "untuk sekarang manual, karena kalau yang sudah bawaan bisa dicela"
+- **Spesifikasi yang disetujui ketua di blueprint:**
+  - satu `nn.Linear` untuk keempat gate
+  - `i, f, o = sigmoid`, `g = tanh`
+  - bias forget gate diinisialisasi 1
+- **Urutan pengerjaan:** ketua menetapkan urutan modul Anggota 1, yaitu EncoderCNN -> LSTMCell -> DecoderLSTM -> CaptioningModel. LSTMCell dikerjakan sebelum decoder karena decoder memanggil sel ini di setiap langkah.
+- **Verifikasi:** ketua menjalankan uji di GPU Colab dan memastikan semua pengecekan lulus sebelum lanjut ke modul berikutnya.
+
+---
+
 ## KRONOLOGI PROMPT & RESPONS
 
 ### 1. TAHAP INISIASI
 - **Prompt Kelompok:**
   > "lanjut"
 
-  Lanjutan dari usulan sebelumnya: *"kerjakan LSTMCell manual sesuai blueprint, jelaskan fungsi tiap gate"*.
-  Spesifikasi yang dirujuk (blueprint `README.md`):
-  satu `nn.Linear(input_size + hidden_size, 4 * hidden_size)` untuk keempat gate, `i, f, o = sigmoid`, `g = tanh`, `c' = f*c + i*g`, `h' = o*tanh(c')`, dan bias forget gate diinisialisasi 1.
-- **Alasan Khusus:**
-  - LSTM ditulis manual (bukan `nn.LSTM` / `nn.LSTMCell`) agar sesuai syarat from scratch dan tidak bisa dianggap memakai model jadi.
-  - Dikerjakan sebelum decoder karena decoder memanggil sel ini di setiap langkah waktu.
+  Lanjutan dari langkah berikutnya yang sudah disepakati: LSTMCell manual sesuai blueprint, beserta penjelasan fungsi tiap gate.
+- **Alasan Khusus:** sel LSTM adalah "memori" decoder. Menuliskannya manual memperlihatkan pemahaman tentang cara kerja gate, yang juga akan ditanyakan saat presentasi.
 - **Output Model:**
   - `src/lstm_cell.py`: class `LSTMCell(input_size, hidden_size)`, `forward(x, (h, c)) -> (h', c')`.
     - Gabungan `[x, h]` masuk ke satu `nn.Linear`, hasilnya dipotong 4 menjadi `i, f, g, o`.
@@ -38,7 +47,7 @@
   - Keputusan desain yang dijelaskan LLM:
     - **Satu Linear untuk 4 gate**: hasil matematisnya sama dengan 4 Linear terpisah, tetapi lebih cepat karena dihitung dalam satu perkalian matriks.
     - **Bias forget gate = 1**: di awal training `f ~ sigmoid(1) ~ 0.73`, sehingga sel cenderung menyimpan memori dan informasi awal kalimat tidak cepat hilang.
-  - Hasil uji di Colab (GPU Tesla T4):
+  - Hasil uji yang dijalankan ketua di Colab (GPU Tesla T4):
     ```
     Satu langkah : x (4, 256) -> h (4, 512), c (4, 512)
     Rumus gate   : sesuai (c' = f*c + i*g, h' = o*tanh(c'))

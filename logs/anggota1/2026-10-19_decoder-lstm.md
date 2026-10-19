@@ -9,23 +9,27 @@
 
 ---
 
+## KEPUTUSAN & ARAHAN KETUA
+
+- **Spesifikasi decoder yang disetujui ketua di blueprint:**
+  - `Embedding(vocab_size, 256)`
+  - memori awal dari fitur gambar `h0 = tanh(Linear(fitur))`, `c0 = tanh(Linear(fitur))`
+  - `LSTMCell` manual (hidden 512)
+  - `Dropout(0.3)` lalu `Linear(512, vocab_size)`
+  - `generate` dengan greedy search
+- **Kontrak keluaran** `(B, 29, vocab_size)` ditetapkan ketua sejak sesi perencanaan, agar `train.py` milik Anggota 3 bisa langsung memakainya tanpa koordinasi ulang.
+- **Verifikasi:** ketua menjalankan uji di GPU Colab, memastikan semua pengecekan lulus, lalu memutuskan lanjut ke CaptioningModel.
+
+---
+
 ## KRONOLOGI PROMPT & RESPONS
 
 ### 1. TAHAP INISIASI
 - **Prompt Kelompok:**
   > "lanjut"
 
-  Lanjutan dari usulan sebelumnya: *"lanjut DecoderLSTM sesuai blueprint, jelaskan teacher forcing dan cara fitur gambar masuk ke LSTM"*.
-
-  Spesifikasi yang dirujuk (blueprint `README.md`):
-  - `Embedding(vocab_size, 256)`
-  - `h0 = tanh(Linear(fitur))`, `c0 = tanh(Linear(fitur))`
-  - loop memakai `LSTMCell` manual (hidden 512)
-  - `Dropout(0.3)` lalu `Linear(512, vocab_size)`
-  - `generate` greedy
-- **Alasan Khusus:**
-  - Decoder adalah penghubung antara fitur gambar (keluaran encoder) dan kalimat.
-  - Kontrak keluaran `(B, 29, vocab_size)` harus tepat karena dipakai langsung oleh `train.py` (Anggota 3).
+  Lanjutan dari langkah berikutnya yang sudah disepakati: DecoderLSTM sesuai blueprint, beserta penjelasan teacher forcing dan cara fitur gambar masuk ke LSTM.
+- **Alasan Khusus:** decoder adalah penghubung antara fitur gambar (keluaran encoder) dan kalimat. Dua konsep yang wajib bisa dijelaskan saat presentasi adalah teacher forcing dan cara gambar memengaruhi kalimat.
 - **Output Model:**
   - `src/decoder.py`: class `DecoderLSTM(vocab_size, embed_dim=256, hidden_dim=512, feature_dim=256, dropout=0.3)`
     - `forward(features, captions)`: teacher forcing. Input decoder `captions[:, :-1]`, keluaran logits `(B, 29, vocab_size)`. Logits ke-t adalah tebakan untuk `captions[:, t+1]`.
@@ -41,7 +45,7 @@
   - Keputusan desain yang dijelaskan LLM:
     - **Teacher forcing**: saat training, LSTM diberi kata yang benar dari caption asli, bukan tebakannya sendiri. Training lebih cepat dan stabil karena satu tebakan salah tidak merusak langkah berikutnya. Saat `generate` tidak ada caption asli, jadi model memakai tebakannya sendiri.
     - **Fitur gambar sebagai memori awal** (`h0`, `c0`): cara paling sederhana menyambungkan encoder dan decoder. `tanh` menjaga nilainya di rentang -1..1 seperti `h` biasa. Rencana optimasi jika caption melenceng dari gambar: memasukkan fitur gambar di setiap langkah.
-  - Hasil uji di Colab (GPU Tesla T4):
+  - Hasil uji yang dijalankan ketua di Colab (GPU Tesla T4):
     ```
     forward      : fitur (4, 256) + caption (4, 30) -> logits (4, 29, 1000)
     Teacher force: tebakan langkah t hanya bergantung pada kata 0..t (tidak mengintip)
