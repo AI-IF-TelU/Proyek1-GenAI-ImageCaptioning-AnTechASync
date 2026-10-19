@@ -16,6 +16,15 @@ Encoder Vanilla CNN dan decoder LSTM (sel ditulis manual) dibangun dan dilatih d
 | 3 | _[isi]_ | Training Loop & Hyperparameter Tuning | `anggota3-training` |
 | 4 | _[isi]_ | Dokumentasi & Error Handler | `anggota4-docs` |
 
+## Dataset
+
+**Flickr8k** (Kaggle): https://www.kaggle.com/datasets/adityajn105/flickr8k
+
+- Isi: folder `Images/` (8.091 gambar) dan `captions.txt` (5 caption per gambar), ±1 GB.
+- Format `captions.txt`: baris pertama header `image,caption`, lalu `nama_file.jpg,teks caption`. Pisahkan hanya pada koma pertama, karena caption bisa mengandung koma.
+- Simpan zip-nya di Google Drive: `ImageCaptioning/data/`. **Jangan di-commit ke GitHub.**
+- Di Colab, ekstrak ke disk lokal (`/content/data`) setiap sesi, karena membaca ribuan gambar langsung dari Drive sangat lambat.
+
 ## Aturan from scratch
 
 - **Dilarang** model pretrained (ResNet, VGG, dll.).
