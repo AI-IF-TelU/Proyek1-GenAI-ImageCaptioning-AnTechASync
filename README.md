@@ -160,11 +160,45 @@ KONTRAK
 - Ukuran: FEATURE_DIM=256, EMBED_DIM=256, HIDDEN_DIM=512, DROPOUT=0.3, MAX_LEN=30
 ```
 
+## Persiapan (sekali saja)
+
+1. Kirim username GitHub ke ketua, lalu terima undangan collaborator lewat email.
+2. Atur identitas Git di laptop (pakai akun GitHub sendiri):
+   ```bash
+   git config --global user.name "Nama Kamu"
+   git config --global user.email "email-akun-github@contoh.com"
+   ```
+3. Clone repo, lalu pindah ke branch sendiri:
+   ```bash
+   git clone https://github.com/steezym/image-captioning.git
+   cd image-captioning
+   git checkout anggota2-data      # sesuaikan: anggota3-training / anggota4-docs
+   ```
+4. Folder Google Drive yang dibagikan ketua: klik kanan → **Organize → Add shortcut → My Drive**, supaya terbaca di Colab sebagai `/content/drive/MyDrive/ImageCaptioning`.
+
 ## Alur kerja
 
-1. `git pull origin main` sebelum mulai bekerja.
-2. Kerjakan modul di branch masing-masing, bersama LLM memakai system prompt di atas.
-3. Coba kode di Colab lewat `notebooks/colab_runner.ipynb`. Hasil uji akhir disimpan di notebook sendiri, misalnya `notebooks/anggota2_uji_data.ipynb` (File → Save a copy in GitHub).
-4. Commit sedikit-sedikit dengan pesan jelas, misalnya `[model] tambah EncoderCNN`.
-5. Isi log di `logs/anggotaX/` memakai [`logs/TEMPLATE_LOG.md`](logs/TEMPLATE_LOG.md) pada hari yang sama.
-6. Modul selesai: buat Pull Request ke `main`. Ketua meninjau lalu merge.
+1. Pastikan berada di branch sendiri, lalu ambil update terbaru:
+   ```bash
+   git checkout anggota2-data      # sesuaikan
+   git pull origin main
+   ```
+2. Kerjakan modul bersama LLM. Selalu tempel system prompt di atas di awal chat.
+3. Coba kode di Colab lewat `notebooks/colab_runner.ipynb`: runtime **T4 GPU**, ganti `BRANCH` di sel Setup sesuai branch sendiri. Hasil uji akhir disimpan di notebook sendiri, misalnya `notebooks/anggota2_uji_data.ipynb` (File → Save a copy in GitHub → branch sendiri).
+4. Commit dan push sedikit-sedikit, jangan menumpuk di akhir:
+   ```bash
+   git add .
+   git commit -m "[data] tambah vocab.py"
+   git pull --rebase origin anggota2-data   # jika sempat menyimpan dari Colab
+   git push origin anggota2-data            # sesuaikan
+   ```
+5. Isi log di `logs/anggotaX/` memakai [`logs/TEMPLATE_LOG.md`](logs/TEMPLATE_LOG.md) pada hari yang sama. Contoh: `logs/anggota1/`.
+6. Modul selesai: buat Pull Request dari branch sendiri ke `main`. Ketua meninjau lalu merge.
+
+## Aturan kerja tim
+
+- **Jangan push langsung ke `main`.** Semua perubahan masuk lewat Pull Request.
+- **Jangan mengubah file milik anggota lain** (lihat pembagian di "Struktur folder"). Jika perlu perubahan, beri tahu pemiliknya.
+- **Jangan menyimpan hasil uji ke `colab_runner.ipynb`**, karena itu template bersama.
+- **Commit dengan akun GitHub sendiri**, supaya kontribusi tiap anggota terlihat.
+- **Error disalin utuh** ke log saat itu juga, jangan ditunda.
