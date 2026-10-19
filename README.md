@@ -206,7 +206,7 @@ KONTRAK
 
 ## Aturan kerja tim
 
-- **Jangan push langsung ke `main`.** Semua perubahan masuk lewat Pull Request.
+- **Jangan push langsung ke `main`.** Semua perubahan kode masuk lewat Pull Request. Pengecualian: ketua boleh memperbarui dokumen panduan (README) langsung di `main` agar bisa segera dibaca semua anggota.
 - **Jangan mengubah file milik anggota lain** (lihat pembagian di "Struktur folder"). Jika perlu perubahan, beri tahu pemiliknya.
 - **Jangan menyimpan hasil uji ke `colab_runner.ipynb`**, karena itu template bersama.
 - **Commit dengan akun GitHub sendiri**, supaya kontribusi tiap anggota terlihat.
