@@ -9,6 +9,16 @@
 
 ---
 
+## KEPUTUSAN & ARAHAN KETUA
+
+- **Integrasi sebagai modul terakhir Anggota 1.** Ketua memutuskan menggabungkan encoder dan decoder menjadi satu model utuh sebelum diserahkan ke Anggota 3 (training).
+- **Verifikasi:** ketua menjalankan uji hafalan di GPU Colab dan memeriksa hasilnya (loss turun, 4/4 caption tepat).
+- **Peninjauan log:** ketua memeriksa isi log sesi ini:
+  > "dalam log itu coba tampilkan isinya apa?"
+- **Integrasi ke `main`:** sebagai ketua, Mazmur Bryan membuat Pull Request #1 (`anggota1-model` -> `main`), merapikan judulnya, lalu melakukan merge. Setelah itu branch anggota 2-4 diperbarui agar berisi kode model terbaru.
+
+---
+
 ## KRONOLOGI PROMPT & RESPONS
 
 ### 1. TAHAP INISIASI
@@ -33,7 +43,7 @@
     5. Setelah hafal, `generate` harus menulis ulang caption yang dihafal dengan tepat.
   - Vocabulary asli (Anggota 2) belum ada, jadi uji memakai `DummyVocab` sebagai pengganti sementara.
   - Alasan uji hafalan yang dijelaskan LLM: jika seluruh aliran data dan gradien benar, model pasti bisa menghafal data sekecil ini. Jika tidak bisa, berarti ada bug. Uji ini menemukan masalah lebih cepat dan murah daripada langsung training penuh di Flickr8k.
-  - Hasil uji di Colab (GPU Tesla T4):
+  - Hasil uji yang dijalankan ketua di Colab (GPU Tesla T4):
     ```
     forward : gambar (4, 3, 128, 128) + caption (4, 30) -> logits (4, 29, 1000)
     caption : 'w156 w789 w547 w772 w599 w253 w253 w751 w288 w288 w825 w82 w...' (masih acak, belum dilatih)
@@ -68,5 +78,6 @@ Belum ada. Optimasi dilakukan setelah training penuh dengan data Flickr8k (bersa
 
 ---
 
-**Commit terkait** (branch `anggota1-model`):
+**Commit terkait:**
 - `abe8f2c` [model] tambah CaptioningModel (encoder + decoder) dan uji hafalan
+- Pull Request #1 `anggota1-model` -> `main`, di-merge oleh ketua
