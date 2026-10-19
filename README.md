@@ -114,7 +114,7 @@ image-captioning/
 │   ├── dataset.py      Anggota 2
 │   ├── train.py        Anggota 3
 │   └── evaluate.py     Anggota 3
-├── notebooks/          colab_runner.ipynb
+├── notebooks/          colab_runner.ipynb (template bersama) + anggotaX_uji_*.ipynb (bukti uji tiap anggota)
 ├── tests/              uji tiap modul
 ├── logs/               log interaksi LLM per anggota
 ├── results/            grafik dan contoh caption
@@ -164,7 +164,7 @@ KONTRAK
 
 1. `git pull origin main` sebelum mulai bekerja.
 2. Kerjakan modul di branch masing-masing, bersama LLM memakai system prompt di atas.
-3. Uji di Colab lewat `notebooks/colab_runner.ipynb`.
+3. Coba kode di Colab lewat `notebooks/colab_runner.ipynb`. Hasil uji akhir disimpan di notebook sendiri, misalnya `notebooks/anggota2_uji_data.ipynb` (File → Save a copy in GitHub).
 4. Commit sedikit-sedikit dengan pesan jelas, misalnya `[model] tambah EncoderCNN`.
 5. Isi log di `logs/anggotaX/` memakai [`logs/TEMPLATE_LOG.md`](logs/TEMPLATE_LOG.md) pada hari yang sama.
 6. Modul selesai: buat Pull Request ke `main`. Ketua meninjau lalu merge.
