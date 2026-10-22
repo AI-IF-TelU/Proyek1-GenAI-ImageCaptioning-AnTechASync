@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Editor & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# === Proyek Image Captioning ===
+# Dataset dan hasil training disimpan di Google Drive, bukan di Git
+data/
+*.zip
+*.pt
+*.pth
+checkpoints/
+kaggle.json
