@@ -78,6 +78,37 @@ def test_validate_one_epoch_does_not_update_weights():
     assert not model.training
 
 
+def test_epoch_functions_report_batch_percentage(capsys):
+    model = TinyCaptionModel(vocab_size=6)
+    loader = _make_loader()
+    criterion = nn.CrossEntropyLoss(ignore_index=PAD_IDX)
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-2)
+
+    train_one_epoch(
+        model,
+        loader,
+        criterion,
+        optimizer,
+        device=torch.device("cpu"),
+        grad_clip=5.0,
+        progress_every=1,
+        progress_label="Epoch 001/003 train",
+    )
+    validate_one_epoch(
+        model,
+        loader,
+        criterion,
+        device=torch.device("cpu"),
+        progress_every=1,
+        progress_label="Epoch 001/003 validasi",
+    )
+
+    output = capsys.readouterr().out
+    assert "Epoch 001/003 train | Batch 2/2 (100.0%)" in output
+    assert "Epoch 001/003 validasi | Batch 2/2 (100.0%)" in output
+    assert "running loss" in output
+
+
 def test_checkpoint_round_trip_uses_plain_state_dicts(tmp_path: Path):
     model = TinyCaptionModel(vocab_size=6)
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
