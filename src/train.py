@@ -69,6 +69,29 @@ def _loss_and_token_count(
     return loss, valid_tokens
 
 
+def _print_progress(
+    *,
+    batch_index: int,
+    total_batches: int | None,
+    progress_every: int,
+    progress_label: str,
+    loss_sum: float,
+    token_count: int,
+) -> None:
+    """Cetak progress batch berkala dan selalu cetak batch terakhir."""
+    is_last = total_batches is not None and batch_index == total_batches
+    if progress_every <= 0 or (batch_index % progress_every != 0 and not is_last):
+        return
+
+    running_loss = loss_sum / token_count
+    if total_batches is None:
+        batch_progress = f"Batch {batch_index}"
+    else:
+        percentage = 100.0 * batch_index / total_batches
+        batch_progress = f"Batch {batch_index}/{total_batches} ({percentage:.1f}%)"
+    print(f"{progress_label} | {batch_progress} | running loss {running_loss:.4f}")
+
+
 def train_one_epoch(
     model: nn.Module,
     data_loader: Iterable[tuple[torch.Tensor, torch.Tensor]],
@@ -77,13 +100,16 @@ def train_one_epoch(
     *,
     device: torch.device,
     grad_clip: float,
+    progress_every: int = 0,
+    progress_label: str = "Train",
 ) -> float:
     """Latih model satu epoch dan kembalikan loss rata-rata per token."""
     model.train()
     loss_sum = 0.0
     token_count = 0
+    total_batches = len(data_loader) if hasattr(data_loader, "__len__") else None
 
-    for images, captions in data_loader:
+    for batch_index, (images, captions) in enumerate(data_loader, start=1):
         images = images.to(device, non_blocking=True)  # (B, 3, 128, 128)
         captions = captions.to(device, non_blocking=True)  # (B, 30)
 
@@ -96,6 +122,14 @@ def train_one_epoch(
 
         loss_sum += loss.item() * valid_tokens
         token_count += valid_tokens
+        _print_progress(
+            batch_index=batch_index,
+            total_batches=total_batches,
+            progress_every=progress_every,
+            progress_label=progress_label,
+            loss_sum=loss_sum,
+            token_count=token_count,
+        )
 
     if token_count == 0:
         raise ValueError("DataLoader training kosong")
@@ -108,20 +142,31 @@ def validate_one_epoch(
     criterion: nn.Module,
     *,
     device: torch.device,
+    progress_every: int = 0,
+    progress_label: str = "Validasi",
 ) -> float:
     """Hitung loss validation/test tanpa mengubah bobot model."""
     model.eval()
     loss_sum = 0.0
     token_count = 0
+    total_batches = len(data_loader) if hasattr(data_loader, "__len__") else None
 
     with torch.inference_mode():
-        for images, captions in data_loader:
+        for batch_index, (images, captions) in enumerate(data_loader, start=1):
             images = images.to(device, non_blocking=True)  # (B, 3, 128, 128)
             captions = captions.to(device, non_blocking=True)  # (B, 30)
             logits = model(images, captions)  # (B, 29, V)
             loss, valid_tokens = _loss_and_token_count(logits, captions, criterion)
             loss_sum += loss.item() * valid_tokens
             token_count += valid_tokens
+            _print_progress(
+                batch_index=batch_index,
+                total_batches=total_batches,
+                progress_every=progress_every,
+                progress_label=progress_label,
+                loss_sum=loss_sum,
+                token_count=token_count,
+            )
 
     if token_count == 0:
         raise ValueError("DataLoader evaluasi kosong")
@@ -275,8 +320,16 @@ def _validate_args(args: argparse.Namespace) -> None:
     invalid = [name for name, value in positive.items() if value <= 0]
     if invalid:
         raise ValueError(f"Nilai harus positif: {', '.join(invalid)}")
-    if args.weight_decay < 0 or args.num_workers < 0 or args.overfit_images < 0:
-        raise ValueError("weight-decay, num-workers, dan overfit-images tidak boleh negatif")
+    if (
+        args.weight_decay < 0
+        or args.num_workers < 0
+        or args.overfit_images < 0
+        or args.progress_every < 0
+    ):
+        raise ValueError(
+            "weight-decay, num-workers, overfit-images, dan progress-every "
+            "tidak boleh negatif"
+        )
     if not 0.0 <= args.dropout < 1.0:
         raise ValueError("dropout harus berada pada rentang [0, 1)")
     if not 0.0 < args.scheduler_factor < 1.0:
@@ -312,6 +365,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--val-size", type=int, default=1000)
     parser.add_argument("--test-size", type=int, default=1000)
     parser.add_argument("--num-workers", type=int, default=0)
+    parser.add_argument(
+        "--progress-every",
+        type=int,
+        default=10,
+        help="Cetak progress setiap N batch; 0 untuk menonaktifkan",
+    )
     parser.add_argument(
         "--overfit-images",
         type=int,
@@ -472,9 +531,16 @@ def run_training(args: argparse.Namespace) -> list[dict[str, Any]]:
             optimizer,
             device=device,
             grad_clip=args.grad_clip,
+            progress_every=args.progress_every,
+            progress_label=f"Epoch {epoch:03d}/{args.epochs:03d} train",
         )
         val_loss = validate_one_epoch(
-            model, validation_loader, criterion, device=device
+            model,
+            validation_loader,
+            criterion,
+            device=device,
+            progress_every=args.progress_every,
+            progress_label=f"Epoch {epoch:03d}/{args.epochs:03d} validasi",
         )
         scheduler.step(val_loss)
 
