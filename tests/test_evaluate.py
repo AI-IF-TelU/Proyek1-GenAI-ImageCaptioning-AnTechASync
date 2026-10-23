@@ -4,7 +4,11 @@ import torch
 
 import pytest
 
-from src.evaluate import prediction_record, validate_checkpoint_vocab
+from src.evaluate import (
+    metrics_from_prediction_records,
+    prediction_record,
+    validate_checkpoint_vocab,
+)
 from src.vocab import Vocabulary
 
 
@@ -41,3 +45,20 @@ def test_checkpoint_vocabulary_must_match_rebuilt_training_vocabulary():
 
     with pytest.raises(ValueError, match="Vocabulary checkpoint"):
         validate_checkpoint_vocab(["<pad>", "<start>", "<end>", "<unk>"], vocab)
+
+
+def test_metrics_are_computed_from_prediction_records():
+    records = [
+        {
+            "image": "example.jpg",
+            "prediction": "a dog runs outside",
+            "references": ["a dog runs outside", "a dog is running"],
+        }
+    ]
+
+    metrics = metrics_from_prediction_records(records)
+
+    assert metrics["bleu_1"] == pytest.approx(1.0)
+    assert metrics["bleu_4"] == pytest.approx(1.0)
+    assert metrics["meteor"] > 0.9
+    assert metrics["cider"] > 0.0
