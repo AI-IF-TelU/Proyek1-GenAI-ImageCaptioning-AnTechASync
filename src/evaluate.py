@@ -13,6 +13,7 @@ import torch.nn as nn
 from PIL import Image
 
 from src.dataset import DataPipeline, build_eval_transform, create_data_pipeline
+from src.metrics import compute_caption_metrics
 from src.model import CaptioningModel
 from src.train import load_checkpoint, resolve_device, validate_one_epoch
 from src.vocab import PAD_IDX, Vocabulary
@@ -43,6 +44,16 @@ def validate_checkpoint_vocab(
         raise ValueError(
             "Vocabulary checkpoint tidak sama dengan vocabulary yang dibangun dari data train"
         )
+
+
+def metrics_from_prediction_records(
+    records: Sequence[dict[str, Any]],
+) -> dict[str, float]:
+    """Hitung metrik corpus dari record prediksi seluruh split evaluasi."""
+    return compute_caption_metrics(
+        [str(record["prediction"]) for record in records],
+        [list(record["references"]) for record in records],
+    )
 
 
 def generate_prediction_records(
@@ -136,19 +147,22 @@ def run_evaluation(args: argparse.Namespace) -> dict[str, Any]:
     test_loss = validate_one_epoch(
         model, pipeline.test_loader, criterion, device=device
     )
-    predictions = generate_prediction_records(
+    all_predictions = generate_prediction_records(
         model,
         pipeline,
         device=device,
-        sample_count=min(args.samples, len(pipeline.splits.test)),
+        sample_count=len(pipeline.splits.test),
         max_len=int(config["max_len"]),
     )
+    metrics = metrics_from_prediction_records(all_predictions)
+    samples = all_predictions[: args.samples]
     result = {
         "checkpoint": str(args.checkpoint.resolve()),
         "checkpoint_epoch": int(checkpoint["epoch"]),
         "test_loss": test_loss,
         "test_images": len(pipeline.splits.test),
-        "samples": predictions,
+        "metrics": metrics,
+        "samples": samples,
     }
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -156,8 +170,17 @@ def run_evaluation(args: argparse.Namespace) -> dict[str, Any]:
     print(f"Device      : {device}")
     print(f"Checkpoint  : {args.checkpoint.resolve()}")
     print(f"Test loss   : {test_loss:.4f}")
+    print(
+        "Metrik      : "
+        f"BLEU-1 {metrics['bleu_1']:.4f} | "
+        f"BLEU-2 {metrics['bleu_2']:.4f} | "
+        f"BLEU-3 {metrics['bleu_3']:.4f} | "
+        f"BLEU-4 {metrics['bleu_4']:.4f} | "
+        f"METEOR {metrics['meteor']:.4f} | "
+        f"CIDEr {metrics['cider']:.4f}"
+    )
     print(f"Hasil       : {args.output.resolve()}")
-    for record in predictions:
+    for record in samples:
         print(f"- {record['image']}: {record['prediction']}")
     return result
 
