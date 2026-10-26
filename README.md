@@ -132,6 +132,25 @@ image-captioning/
 
 Dataset dan checkpoint disimpan di Google Drive (`/content/drive/MyDrive/ImageCaptioning`), bukan di repo.
 
+## Evaluasi checkpoint
+
+Sesudah training selesai, ukur checkpoint terbaik pada seluruh test split:
+
+```bash
+python -m src.evaluate --device auto
+```
+
+Hasil disimpan di `results/evaluation.json` dan mencakup test loss, BLEU-1 sampai
+BLEU-4, METEOR, CIDEr, serta contoh caption. Nilai BLEU/METEOR berada pada rentang
+0–1 dan nilai CIDEr umumnya dilaporkan pada skala 0–10; untuk semuanya, nilai lebih
+tinggi berarti caption lebih dekat dengan beberapa reference manusia. Implementasi
+METEOR proyek ini memakai pencocokan token eksak tanpa stemming atau sinonim agar
+evaluasi deterministik dan tidak membutuhkan unduhan resource NLP.
+
+Gunakan split, seed, dan konfigurasi evaluasi yang sama saat membandingkan training.
+Jangan memilih model berdasarkan test score; gunakan validation loss selama training,
+lalu test score hanya untuk evaluasi akhir checkpoint terbaik.
+
 ## System prompt bersama (Bagian Umum)
 
 Tempel di awal **setiap** chat baru dengan LLM, lalu tambahkan bagian peran masing-masing.
