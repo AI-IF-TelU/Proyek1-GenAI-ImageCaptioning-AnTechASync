@@ -1,0 +1,126 @@
+{
+  "checkpoint": "C:\\Users\\mazmu\\ic_data\\runs\\exp03_dropout0.5\\checkpoints\\best_model.pt",
+  "checkpoint_epoch": 20,
+  "test_loss": 2.953470564252449,
+  "test_images": 1000,
+  "metrics": {
+    "bleu_1": 0.4871358304956489,
+    "bleu_2": 0.28686575199002035,
+    "bleu_3": 0.16418194231953842,
+    "bleu_4": 0.09939636640626745,
+    "meteor": 0.2826203388603985,
+    "cider": 0.32874950305432926
+  },
+  "samples": [
+    {
+      "image": "3044536048_e615466e7f.jpg",
+      "prediction": "a dog is running through the water",
+      "references": [
+        "a lone parasurfer surfing a huge wave in the ocean .",
+        "A man parasurfs in the ocean",
+        "A person in a green jacket it surfing while holding on to a line .",
+        "A person in green surfing a wave .",
+        "\"A person on a surfboard in the waves , holding onto a tether .\""
+      ]
+    },
+    {
+      "image": "3340857141_85d97a7466.jpg",
+      "prediction": "a dog is running through the grass",
+      "references": [
+        "A brown dog is lowering his head near a smaller white dog outdoors .",
+        "A small white dog and a large brown dog .",
+        "Small and Large dog playing in the field .",
+        "The small dog teases the large dog in the field .",
+        "Two dogs ."
+      ]
+    },
+    {
+      "image": "2067362863_59577f9d4d.jpg",
+      "prediction": "a dog is running through the grass",
+      "references": [
+        "A brown dog is jumping up at another dog in front of the man in jeans .",
+        "A tan dog is grappling another tan dog on gravel while someone stands narby .",
+        "Two dogs engaged in physical contact with a man in the background .",
+        "Two dogs play fighting on sand .",
+        "Two dogs wrestle or hug ."
+      ]
+    },
+    {
+      "image": "465994762_1760e83c5d.jpg",
+      "prediction": "a man is riding a bike through a grassy field",
+      "references": [
+        "a brown dog jumps over a chain .",
+        "A dog jumps over a chain .",
+        "A dog leaping over a chain .",
+        "A greyhound jumps over a chain .",
+        "Brown dog leaps over a chain suspended over a gravel road ."
+      ]
+    },
+    {
+      "image": "3018304737_0a46fc5f1d.jpg",
+      "prediction": "a surfer is surfing on a wave",
+      "references": [
+        "a lone surfboarder surfing a wave riding a white surfboard .",
+        "A man catches a huge wave on his surfboard .",
+        "A surfboarder going down a wave .",
+        "A surfer makes a turn on a wave .",
+        "The surfer is riding a wave ."
+      ]
+    },
+    {
+      "image": "3675742996_02ccef16a3.jpg",
+      "prediction": "a man in a red shirt is climbing a rock",
+      "references": [
+        "A child in a flower print dress is in a field of flowers .",
+        "A little blond girl in a flowery dress among white flowers .",
+        "\"A young , blonde girl picking flowers in a grassy field .\"",
+        "A young girl in a field of white flowers .",
+        "\"The blonde little girl picks flowers in a field , wearing a white dress with flowers on it .\""
+      ]
+    },
+    {
+      "image": "2626158969_ac09aeb88d.jpg",
+      "prediction": "a young boy in a blue shirt is jumping into the water",
+      "references": [
+        "A boy in a pool tilts his head back .",
+        "A boy with dark hair is in water and is looking up .",
+        "A closeup of a young dark-haired boy swimming in a pool of water .",
+        "A smiling boy floats in a pool .",
+        "Boy peeking up from blue water ."
+      ]
+    },
+    {
+      "image": "3118425885_f0cc035032.jpg",
+      "prediction": "a little girl is playing with a toy",
+      "references": [
+        "A blonde lady wearing a tan jacket samples a seafood dish at a restaurant .",
+        "A blond woman is eating in a busy restaurant .",
+        "A blurry woman eating fish .",
+        "A woman eating a large fish in a restaurant .",
+        "A woman is eating fish at a restaurant ."
+      ]
+    },
+    {
+      "image": "314603661_51e05e0e24.jpg",
+      "prediction": "a dog is playing with a toy",
+      "references": [
+        "A basett hound runs for a falling biscut .",
+        "A brown dog with big ears walks across the carpet after a brown toy .",
+        "A hound dog runs around in a house chasing a toy .",
+        "Brown and white dog trotting with brown object falling nearby .",
+        "The brown and white dog is running to catch something ."
+      ]
+    },
+    {
+      "image": "2294688426_96c8614f1d.jpg",
+      "prediction": "a man in a blue shirt is jumping on a skateboard",
+      "references": [
+        "A man dressed in a black poncho stands in the middle of a parking lot .",
+        "A man wearing a black sweatshirt poses for a picture in a parking lot .",
+        "\"A man with a beard , dressed in black , is smoking .\"",
+        "A mean wearing a black hooded sweatshirt smokes a cigarette at the side of a road .",
+        "The man in the robe has gold on his beard ."
+      ]
+    }
+  ]
+}

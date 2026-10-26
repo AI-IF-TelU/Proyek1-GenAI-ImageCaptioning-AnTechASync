@@ -1,0 +1,245 @@
+Device       : cuda
+Vocabulary   : 2,579 token
+Train batch  : 476
+Valid batch  : 79
+Checkpoint   : C:\Users\mazmu\ic_data\runs\exp03_dropout0.5\checkpoints
+Mode         : training penuh
+Epoch 001/030 train | Batch 100/476 (21.0%) | running loss 4.7926
+Epoch 001/030 train | Batch 200/476 (42.0%) | running loss 4.4313
+Epoch 001/030 train | Batch 300/476 (63.0%) | running loss 4.2359
+Epoch 001/030 train | Batch 400/476 (84.0%) | running loss 4.1026
+Epoch 001/030 train | Batch 476/476 (100.0%) | running loss 4.0258
+Epoch 001/030 validasi | Batch 79/79 (100.0%) | running loss 3.4923
+Epoch 001/030 | train 4.0258 | val 3.4923 | lr 1.00e-03 | 165.6s | best
+Epoch 002/030 train | Batch 100/476 (21.0%) | running loss 3.5695
+Epoch 002/030 train | Batch 200/476 (42.0%) | running loss 3.5219
+Epoch 002/030 train | Batch 300/476 (63.0%) | running loss 3.5012
+Epoch 002/030 train | Batch 400/476 (84.0%) | running loss 3.4817
+Epoch 002/030 train | Batch 476/476 (100.0%) | running loss 3.4678
+Epoch 002/030 validasi | Batch 79/79 (100.0%) | running loss 3.2992
+Epoch 002/030 | train 3.4678 | val 3.2992 | lr 1.00e-03 | 87.6s | best
+Epoch 003/030 train | Batch 100/476 (21.0%) | running loss 3.3319
+Epoch 003/030 train | Batch 200/476 (42.0%) | running loss 3.3300
+Epoch 003/030 train | Batch 300/476 (63.0%) | running loss 3.3221
+Epoch 003/030 train | Batch 400/476 (84.0%) | running loss 3.3196
+Epoch 003/030 train | Batch 476/476 (100.0%) | running loss 3.3162
+Epoch 003/030 validasi | Batch 79/79 (100.0%) | running loss 3.2113
+Epoch 003/030 | train 3.3162 | val 3.2113 | lr 1.00e-03 | 86.0s | best
+Epoch 004/030 train | Batch 100/476 (21.0%) | running loss 3.2247
+Epoch 004/030 train | Batch 200/476 (42.0%) | running loss 3.2329
+Epoch 004/030 train | Batch 300/476 (63.0%) | running loss 3.2361
+Epoch 004/030 train | Batch 400/476 (84.0%) | running loss 3.2295
+Epoch 004/030 train | Batch 476/476 (100.0%) | running loss 3.2312
+Epoch 004/030 validasi | Batch 79/79 (100.0%) | running loss 3.1490
+Epoch 004/030 | train 3.2312 | val 3.1490 | lr 1.00e-03 | 94.8s | best
+Epoch 005/030 train | Batch 100/476 (21.0%) | running loss 3.1704
+Epoch 005/030 train | Batch 200/476 (42.0%) | running loss 3.1775
+Epoch 005/030 train | Batch 300/476 (63.0%) | running loss 3.1756
+Epoch 005/030 train | Batch 400/476 (84.0%) | running loss 3.1728
+Epoch 005/030 train | Batch 476/476 (100.0%) | running loss 3.1739
+Epoch 005/030 validasi | Batch 79/79 (100.0%) | running loss 3.1094
+Epoch 005/030 | train 3.1739 | val 3.1094 | lr 1.00e-03 | 85.0s | best
+Epoch 006/030 train | Batch 100/476 (21.0%) | running loss 3.1084
+Epoch 006/030 train | Batch 200/476 (42.0%) | running loss 3.1221
+Epoch 006/030 train | Batch 300/476 (63.0%) | running loss 3.1249
+Epoch 006/030 train | Batch 400/476 (84.0%) | running loss 3.1290
+Epoch 006/030 train | Batch 476/476 (100.0%) | running loss 3.1317
+Epoch 006/030 validasi | Batch 79/79 (100.0%) | running loss 3.0804
+Epoch 006/030 | train 3.1317 | val 3.0804 | lr 1.00e-03 | 88.6s | best
+Epoch 007/030 train | Batch 100/476 (21.0%) | running loss 3.0950
+Epoch 007/030 train | Batch 200/476 (42.0%) | running loss 3.0996
+Epoch 007/030 train | Batch 300/476 (63.0%) | running loss 3.0963
+Epoch 007/030 train | Batch 400/476 (84.0%) | running loss 3.0976
+Epoch 007/030 train | Batch 476/476 (100.0%) | running loss 3.0985
+Epoch 007/030 validasi | Batch 79/79 (100.0%) | running loss 3.0467
+Epoch 007/030 | train 3.0985 | val 3.0467 | lr 1.00e-03 | 76.1s | best
+Epoch 008/030 train | Batch 100/476 (21.0%) | running loss 3.0476
+Epoch 008/030 train | Batch 200/476 (42.0%) | running loss 3.0668
+Epoch 008/030 train | Batch 300/476 (63.0%) | running loss 3.0698
+Epoch 008/030 train | Batch 400/476 (84.0%) | running loss 3.0679
+Epoch 008/030 train | Batch 476/476 (100.0%) | running loss 3.0691
+Epoch 008/030 validasi | Batch 79/79 (100.0%) | running loss 3.0257
+Epoch 008/030 | train 3.0691 | val 3.0257 | lr 1.00e-03 | 84.0s | best
+Epoch 009/030 train | Batch 100/476 (21.0%) | running loss 3.0335
+Epoch 009/030 train | Batch 200/476 (42.0%) | running loss 3.0365
+Epoch 009/030 train | Batch 300/476 (63.0%) | running loss 3.0408
+Epoch 009/030 train | Batch 400/476 (84.0%) | running loss 3.0409
+Epoch 009/030 train | Batch 476/476 (100.0%) | running loss 3.0408
+Epoch 009/030 validasi | Batch 79/79 (100.0%) | running loss 3.0196
+Epoch 009/030 | train 3.0408 | val 3.0196 | lr 1.00e-03 | 79.3s | best
+Epoch 010/030 train | Batch 100/476 (21.0%) | running loss 3.0011
+Epoch 010/030 train | Batch 200/476 (42.0%) | running loss 3.0023
+Epoch 010/030 train | Batch 300/476 (63.0%) | running loss 3.0040
+Epoch 010/030 train | Batch 400/476 (84.0%) | running loss 3.0114
+Epoch 010/030 train | Batch 476/476 (100.0%) | running loss 3.0156
+Epoch 010/030 validasi | Batch 79/79 (100.0%) | running loss 3.0007
+Epoch 010/030 | train 3.0156 | val 3.0007 | lr 1.00e-03 | 67.1s | best
+Epoch 011/030 train | Batch 100/476 (21.0%) | running loss 2.9785
+Epoch 011/030 train | Batch 200/476 (42.0%) | running loss 2.9861
+Epoch 011/030 train | Batch 300/476 (63.0%) | running loss 2.9900
+Epoch 011/030 train | Batch 400/476 (84.0%) | running loss 2.9924
+Epoch 011/030 train | Batch 476/476 (100.0%) | running loss 2.9936
+Epoch 011/030 validasi | Batch 79/79 (100.0%) | running loss 2.9880
+Epoch 011/030 | train 2.9936 | val 2.9880 | lr 1.00e-03 | 69.3s | best
+Epoch 012/030 train | Batch 100/476 (21.0%) | running loss 2.9508
+Epoch 012/030 train | Batch 200/476 (42.0%) | running loss 2.9580
+Epoch 012/030 train | Batch 300/476 (63.0%) | running loss 2.9621
+Epoch 012/030 train | Batch 400/476 (84.0%) | running loss 2.9638
+Epoch 012/030 train | Batch 476/476 (100.0%) | running loss 2.9693
+Epoch 012/030 validasi | Batch 79/79 (100.0%) | running loss 2.9871
+Epoch 012/030 | train 2.9693 | val 2.9871 | lr 1.00e-03 | 68.7s | best
+Epoch 013/030 train | Batch 100/476 (21.0%) | running loss 2.9279
+Epoch 013/030 train | Batch 200/476 (42.0%) | running loss 2.9340
+Epoch 013/030 train | Batch 300/476 (63.0%) | running loss 2.9445
+Epoch 013/030 train | Batch 400/476 (84.0%) | running loss 2.9484
+Epoch 013/030 train | Batch 476/476 (100.0%) | running loss 2.9501
+Epoch 013/030 validasi | Batch 79/79 (100.0%) | running loss 2.9803
+Epoch 013/030 | train 2.9501 | val 2.9803 | lr 1.00e-03 | 82.1s | best
+Epoch 014/030 train | Batch 100/476 (21.0%) | running loss 2.8959
+Epoch 014/030 train | Batch 200/476 (42.0%) | running loss 2.9124
+Epoch 014/030 train | Batch 300/476 (63.0%) | running loss 2.9204
+Epoch 014/030 train | Batch 400/476 (84.0%) | running loss 2.9266
+Epoch 014/030 train | Batch 476/476 (100.0%) | running loss 2.9301
+Epoch 014/030 validasi | Batch 79/79 (100.0%) | running loss 3.0106
+Epoch 014/030 | train 2.9301 | val 3.0106 | lr 1.00e-03 | 97.8s
+Epoch 015/030 train | Batch 100/476 (21.0%) | running loss 2.8962
+Epoch 015/030 train | Batch 200/476 (42.0%) | running loss 2.9012
+Epoch 015/030 train | Batch 300/476 (63.0%) | running loss 2.9061
+Epoch 015/030 train | Batch 400/476 (84.0%) | running loss 2.9071
+Epoch 015/030 train | Batch 476/476 (100.0%) | running loss 2.9108
+Epoch 015/030 validasi | Batch 79/79 (100.0%) | running loss 2.9825
+Epoch 015/030 | train 2.9108 | val 2.9825 | lr 1.00e-03 | 85.3s
+Epoch 016/030 train | Batch 100/476 (21.0%) | running loss 2.8656
+Epoch 016/030 train | Batch 200/476 (42.0%) | running loss 2.8863
+Epoch 016/030 train | Batch 300/476 (63.0%) | running loss 2.8901
+Epoch 016/030 train | Batch 400/476 (84.0%) | running loss 2.8920
+Epoch 016/030 train | Batch 476/476 (100.0%) | running loss 2.8959
+Epoch 016/030 validasi | Batch 79/79 (100.0%) | running loss 2.9611
+Epoch 016/030 | train 2.8959 | val 2.9611 | lr 1.00e-03 | 78.8s | best
+Epoch 017/030 train | Batch 100/476 (21.0%) | running loss 2.8440
+Epoch 017/030 train | Batch 200/476 (42.0%) | running loss 2.8621
+Epoch 017/030 train | Batch 300/476 (63.0%) | running loss 2.8723
+Epoch 017/030 train | Batch 400/476 (84.0%) | running loss 2.8792
+Epoch 017/030 train | Batch 476/476 (100.0%) | running loss 2.8803
+Epoch 017/030 validasi | Batch 79/79 (100.0%) | running loss 2.9689
+Epoch 017/030 | train 2.8803 | val 2.9689 | lr 1.00e-03 | 71.5s
+Epoch 018/030 train | Batch 100/476 (21.0%) | running loss 2.8448
+Epoch 018/030 train | Batch 200/476 (42.0%) | running loss 2.8522
+Epoch 018/030 train | Batch 300/476 (63.0%) | running loss 2.8560
+Epoch 018/030 train | Batch 400/476 (84.0%) | running loss 2.8635
+Epoch 018/030 train | Batch 476/476 (100.0%) | running loss 2.8664
+Epoch 018/030 validasi | Batch 79/79 (100.0%) | running loss 2.9632
+Epoch 018/030 | train 2.8664 | val 2.9632 | lr 1.00e-03 | 89.7s
+Epoch 019/030 train | Batch 100/476 (21.0%) | running loss 2.8267
+Epoch 019/030 train | Batch 200/476 (42.0%) | running loss 2.8421
+Epoch 019/030 train | Batch 300/476 (63.0%) | running loss 2.8456
+Epoch 019/030 train | Batch 400/476 (84.0%) | running loss 2.8511
+Epoch 019/030 train | Batch 476/476 (100.0%) | running loss 2.8544
+Epoch 019/030 validasi | Batch 79/79 (100.0%) | running loss 2.9848
+Epoch 019/030 | train 2.8544 | val 2.9848 | lr 5.00e-04 | 81.7s
+Epoch 020/030 train | Batch 100/476 (21.0%) | running loss 2.7616
+Epoch 020/030 train | Batch 200/476 (42.0%) | running loss 2.7566
+Epoch 020/030 train | Batch 300/476 (63.0%) | running loss 2.7651
+Epoch 020/030 train | Batch 400/476 (84.0%) | running loss 2.7694
+Epoch 020/030 train | Batch 476/476 (100.0%) | running loss 2.7761
+Epoch 020/030 validasi | Batch 79/79 (100.0%) | running loss 2.9468
+Epoch 020/030 | train 2.7761 | val 2.9468 | lr 5.00e-04 | 87.4s | best
+Epoch 021/030 train | Batch 100/476 (21.0%) | running loss 2.7306
+Epoch 021/030 train | Batch 200/476 (42.0%) | running loss 2.7310
+Epoch 021/030 train | Batch 300/476 (63.0%) | running loss 2.7403
+Epoch 021/030 train | Batch 400/476 (84.0%) | running loss 2.7529
+Epoch 021/030 train | Batch 476/476 (100.0%) | running loss 2.7572
+Epoch 021/030 validasi | Batch 79/79 (100.0%) | running loss 2.9574
+Epoch 021/030 | train 2.7572 | val 2.9574 | lr 5.00e-04 | 117.6s
+Epoch 022/030 train | Batch 100/476 (21.0%) | running loss 2.7228
+Epoch 022/030 train | Batch 200/476 (42.0%) | running loss 2.7288
+Epoch 022/030 train | Batch 300/476 (63.0%) | running loss 2.7378
+Epoch 022/030 train | Batch 400/476 (84.0%) | running loss 2.7411
+Epoch 022/030 train | Batch 476/476 (100.0%) | running loss 2.7437
+Epoch 022/030 validasi | Batch 79/79 (100.0%) | running loss 2.9667
+Epoch 022/030 | train 2.7437 | val 2.9667 | lr 5.00e-04 | 68.2s
+Epoch 023/030 train | Batch 100/476 (21.0%) | running loss 2.6937
+Epoch 023/030 train | Batch 200/476 (42.0%) | running loss 2.7127
+Epoch 023/030 train | Batch 300/476 (63.0%) | running loss 2.7219
+Epoch 023/030 train | Batch 400/476 (84.0%) | running loss 2.7291
+Epoch 023/030 train | Batch 476/476 (100.0%) | running loss 2.7316
+Epoch 023/030 validasi | Batch 79/79 (100.0%) | running loss 2.9759
+Epoch 023/030 | train 2.7316 | val 2.9759 | lr 2.50e-04 | 72.4s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\mazmu\OneDrive\Dokumen\MAJOR ASSIGNMENT GEN AI\image-captioning\src\train.py", line 603, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\mazmu\OneDrive\Dokumen\MAJOR ASSIGNMENT GEN AI\image-captioning\src\train.py", line 599, in main
+    run_training(parse_args(argv))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mazmu\OneDrive\Dokumen\MAJOR ASSIGNMENT GEN AI\image-captioning\src\train.py", line 527, in run_training
+    train_loss = train_one_epoch(
+        model,
+    ...<6 lines>...
+        progress_label=f"Epoch {epoch:03d}/{args.epochs:03d} train",
+    )
+  File "C:\Users\mazmu\OneDrive\Dokumen\MAJOR ASSIGNMENT GEN AI\image-captioning\src\train.py", line 112, in train_one_epoch
+    for batch_index, (images, captions) in enumerate(data_loader, start=1):
+                                           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\dataloader.py", line 725, in __next__
+    data = self._next_data()
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\dataloader.py", line 1531, in _next_data
+    return self._process_data(data, worker_id)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\dataloader.py", line 1569, in _process_data
+    data.reraise()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\_utils.py", line 803, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 2.
+Original Traceback (most recent call last):
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\_utils\worker.py", line 375, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 57, in fetch
+    return self.collate_fn(data)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\_utils\collate.py", line 401, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\_utils\collate.py", line 215, in collate
+    collate(samples, collate_fn_map=collate_fn_map)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\_utils\collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\_utils\collate.py", line 273, in collate_tensor_fn
+    storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\storage.py", line 1220, in _new_shared
+    untyped_storage = torch.UntypedStorage._new_shared(
+        size * self._element_size(), device=device
+    )
+  File "C:\Users\mazmu\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\storage.py", line 421, in _new_shared
+    return cls._new_using_filename_cpu(size)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+RuntimeError: Couldn't open shared file mapping: <torch_27580_1146490213_5486>, error code: <1455>
+
+=== RESUME setelah error 1455 (RAM penuh), num-workers 4 -> 1 ===
+Device       : cuda
+Vocabulary   : 2,579 token
+Train batch  : 476
+Valid batch  : 79
+Checkpoint   : C:\Users\mazmu\ic_data\runs\exp03_dropout0.5\checkpoints
+Mode         : training penuh
+Epoch 024/030 train | Batch 100/476 (21.0%) | running loss 2.6611
+Epoch 024/030 train | Batch 200/476 (42.0%) | running loss 2.6683
+Epoch 024/030 train | Batch 300/476 (63.0%) | running loss 2.6718
+Epoch 024/030 train | Batch 400/476 (84.0%) | running loss 2.6743
+Epoch 024/030 train | Batch 476/476 (100.0%) | running loss 2.6759
+Epoch 024/030 validasi | Batch 79/79 (100.0%) | running loss 2.9619
+Epoch 024/030 | train 2.6759 | val 2.9619 | lr 2.50e-04 | 225.7s
+Epoch 025/030 train | Batch 100/476 (21.0%) | running loss 2.6797
+Epoch 025/030 train | Batch 200/476 (42.0%) | running loss 2.6610
+Epoch 025/030 train | Batch 300/476 (63.0%) | running loss 2.6615
+Epoch 025/030 train | Batch 400/476 (84.0%) | running loss 2.6610
+Epoch 025/030 train | Batch 476/476 (100.0%) | running loss 2.6617
+Epoch 025/030 validasi | Batch 79/79 (100.0%) | running loss 2.9698
+Epoch 025/030 | train 2.6617 | val 2.9698 | lr 2.50e-04 | 180.4s
+Early stopping: validation loss tidak membaik selama 5 epoch.
+Model terbaik : C:\Users\mazmu\ic_data\runs\exp03_dropout0.5\checkpoints\best_model.pt
+Grafik loss   : C:\Users\mazmu\ic_data\runs\exp03_dropout0.5\results\loss_curve.png

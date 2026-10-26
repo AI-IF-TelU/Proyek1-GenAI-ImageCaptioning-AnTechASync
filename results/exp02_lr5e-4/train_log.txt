@@ -1,0 +1,149 @@
+Device       : cuda
+Vocabulary   : 2,579 token
+Train batch  : 476
+Valid batch  : 79
+Checkpoint   : C:\Users\mazmu\ic_data\runs\exp02_lr5e-4\checkpoints
+Mode         : training penuh
+Epoch 001/030 train | Batch 100/476 (21.0%) | running loss 5.0231
+Epoch 001/030 train | Batch 200/476 (42.0%) | running loss 4.6351
+Epoch 001/030 train | Batch 300/476 (63.0%) | running loss 4.4232
+Epoch 001/030 train | Batch 400/476 (84.0%) | running loss 4.2788
+Epoch 001/030 train | Batch 476/476 (100.0%) | running loss 4.1937
+Epoch 001/030 validasi | Batch 79/79 (100.0%) | running loss 3.6557
+Epoch 001/030 | train 4.1937 | val 3.6557 | lr 5.00e-04 | 228.9s | best
+Epoch 002/030 train | Batch 100/476 (21.0%) | running loss 3.6909
+Epoch 002/030 train | Batch 200/476 (42.0%) | running loss 3.6325
+Epoch 002/030 train | Batch 300/476 (63.0%) | running loss 3.6035
+Epoch 002/030 train | Batch 400/476 (84.0%) | running loss 3.5770
+Epoch 002/030 train | Batch 476/476 (100.0%) | running loss 3.5586
+Epoch 002/030 validasi | Batch 79/79 (100.0%) | running loss 3.4010
+Epoch 002/030 | train 3.5586 | val 3.4010 | lr 5.00e-04 | 247.4s | best
+Epoch 003/030 train | Batch 100/476 (21.0%) | running loss 3.3990
+Epoch 003/030 train | Batch 200/476 (42.0%) | running loss 3.3906
+Epoch 003/030 train | Batch 300/476 (63.0%) | running loss 3.3777
+Epoch 003/030 train | Batch 400/476 (84.0%) | running loss 3.3705
+Epoch 003/030 train | Batch 476/476 (100.0%) | running loss 3.3638
+Epoch 003/030 validasi | Batch 79/79 (100.0%) | running loss 3.2689
+Epoch 003/030 | train 3.3638 | val 3.2689 | lr 5.00e-04 | 180.5s | best
+Epoch 004/030 train | Batch 100/476 (21.0%) | running loss 3.2583
+Epoch 004/030 train | Batch 200/476 (42.0%) | running loss 3.2583
+Epoch 004/030 train | Batch 300/476 (63.0%) | running loss 3.2560
+Epoch 004/030 train | Batch 400/476 (84.0%) | running loss 3.2453
+Epoch 004/030 train | Batch 476/476 (100.0%) | running loss 3.2436
+Epoch 004/030 validasi | Batch 79/79 (100.0%) | running loss 3.1935
+Epoch 004/030 | train 3.2436 | val 3.1935 | lr 5.00e-04 | 186.7s | best
+Epoch 005/030 train | Batch 100/476 (21.0%) | running loss 3.1678
+Epoch 005/030 train | Batch 200/476 (42.0%) | running loss 3.1707
+Epoch 005/030 train | Batch 300/476 (63.0%) | running loss 3.1656
+Epoch 005/030 train | Batch 400/476 (84.0%) | running loss 3.1591
+Epoch 005/030 train | Batch 476/476 (100.0%) | running loss 3.1578
+Epoch 005/030 validasi | Batch 79/79 (100.0%) | running loss 3.1723
+Epoch 005/030 | train 3.1578 | val 3.1723 | lr 5.00e-04 | 161.8s | best
+Epoch 006/030 train | Batch 100/476 (21.0%) | running loss 3.0803
+Epoch 006/030 train | Batch 200/476 (42.0%) | running loss 3.0889
+Epoch 006/030 train | Batch 300/476 (63.0%) | running loss 3.0882
+Epoch 006/030 train | Batch 400/476 (84.0%) | running loss 3.0888
+Epoch 006/030 train | Batch 476/476 (100.0%) | running loss 3.0895
+Epoch 006/030 validasi | Batch 79/79 (100.0%) | running loss 3.0872
+Epoch 006/030 | train 3.0895 | val 3.0872 | lr 5.00e-04 | 157.2s | best
+Epoch 007/030 train | Batch 100/476 (21.0%) | running loss 3.0462
+Epoch 007/030 train | Batch 200/476 (42.0%) | running loss 3.0482
+Epoch 007/030 train | Batch 300/476 (63.0%) | running loss 3.0399
+Epoch 007/030 train | Batch 400/476 (84.0%) | running loss 3.0370
+Epoch 007/030 train | Batch 476/476 (100.0%) | running loss 3.0354
+Epoch 007/030 validasi | Batch 79/79 (100.0%) | running loss 3.0523
+Epoch 007/030 | train 3.0354 | val 3.0523 | lr 5.00e-04 | 150.8s | best
+Epoch 008/030 train | Batch 100/476 (21.0%) | running loss 2.9778
+Epoch 008/030 train | Batch 200/476 (42.0%) | running loss 2.9936
+Epoch 008/030 train | Batch 300/476 (63.0%) | running loss 2.9946
+Epoch 008/030 train | Batch 400/476 (84.0%) | running loss 2.9890
+Epoch 008/030 train | Batch 476/476 (100.0%) | running loss 2.9873
+Epoch 008/030 validasi | Batch 79/79 (100.0%) | running loss 3.0331
+Epoch 008/030 | train 2.9873 | val 3.0331 | lr 5.00e-04 | 158.5s | best
+Epoch 009/030 train | Batch 100/476 (21.0%) | running loss 2.9510
+Epoch 009/030 train | Batch 200/476 (42.0%) | running loss 2.9475
+Epoch 009/030 train | Batch 300/476 (63.0%) | running loss 2.9483
+Epoch 009/030 train | Batch 400/476 (84.0%) | running loss 2.9456
+Epoch 009/030 train | Batch 476/476 (100.0%) | running loss 2.9433
+Epoch 009/030 validasi | Batch 79/79 (100.0%) | running loss 3.0154
+Epoch 009/030 | train 2.9433 | val 3.0154 | lr 5.00e-04 | 168.7s | best
+Epoch 010/030 train | Batch 100/476 (21.0%) | running loss 2.9017
+Epoch 010/030 train | Batch 200/476 (42.0%) | running loss 2.8956
+Epoch 010/030 train | Batch 300/476 (63.0%) | running loss 2.8950
+Epoch 010/030 train | Batch 400/476 (84.0%) | running loss 2.8993
+Epoch 010/030 train | Batch 476/476 (100.0%) | running loss 2.9013
+Epoch 010/030 validasi | Batch 79/79 (100.0%) | running loss 3.0076
+Epoch 010/030 | train 2.9013 | val 3.0076 | lr 5.00e-04 | 149.1s | best
+Epoch 011/030 train | Batch 100/476 (21.0%) | running loss 2.8605
+Epoch 011/030 train | Batch 200/476 (42.0%) | running loss 2.8645
+Epoch 011/030 train | Batch 300/476 (63.0%) | running loss 2.8662
+Epoch 011/030 train | Batch 400/476 (84.0%) | running loss 2.8658
+Epoch 011/030 train | Batch 476/476 (100.0%) | running loss 2.8662
+Epoch 011/030 validasi | Batch 79/79 (100.0%) | running loss 3.0044
+Epoch 011/030 | train 2.8662 | val 3.0044 | lr 5.00e-04 | 152.3s | best
+Epoch 012/030 train | Batch 100/476 (21.0%) | running loss 2.8201
+Epoch 012/030 train | Batch 200/476 (42.0%) | running loss 2.8248
+Epoch 012/030 train | Batch 300/476 (63.0%) | running loss 2.8254
+Epoch 012/030 train | Batch 400/476 (84.0%) | running loss 2.8258
+Epoch 012/030 train | Batch 476/476 (100.0%) | running loss 2.8289
+Epoch 012/030 validasi | Batch 79/79 (100.0%) | running loss 3.1283
+Epoch 012/030 | train 2.8289 | val 3.1283 | lr 5.00e-04 | 149.4s
+Epoch 013/030 train | Batch 100/476 (21.0%) | running loss 2.7826
+Epoch 013/030 train | Batch 200/476 (42.0%) | running loss 2.7880
+Epoch 013/030 train | Batch 300/476 (63.0%) | running loss 2.7971
+Epoch 013/030 train | Batch 400/476 (84.0%) | running loss 2.7977
+Epoch 013/030 train | Batch 476/476 (100.0%) | running loss 2.7977
+Epoch 013/030 validasi | Batch 79/79 (100.0%) | running loss 3.0707
+Epoch 013/030 | train 2.7977 | val 3.0707 | lr 5.00e-04 | 152.4s
+Epoch 014/030 train | Batch 100/476 (21.0%) | running loss 2.7375
+Epoch 014/030 train | Batch 200/476 (42.0%) | running loss 2.7519
+Epoch 014/030 train | Batch 300/476 (63.0%) | running loss 2.7600
+Epoch 014/030 train | Batch 400/476 (84.0%) | running loss 2.7639
+Epoch 014/030 train | Batch 476/476 (100.0%) | running loss 2.7661
+Epoch 014/030 validasi | Batch 79/79 (100.0%) | running loss 3.0114
+Epoch 014/030 | train 2.7661 | val 3.0114 | lr 2.50e-04 | 153.8s
+Epoch 015/030 train | Batch 100/476 (21.0%) | running loss 2.7071
+Epoch 015/030 train | Batch 200/476 (42.0%) | running loss 2.6995
+Epoch 015/030 train | Batch 300/476 (63.0%) | running loss 2.6981
+Epoch 015/030 train | Batch 400/476 (84.0%) | running loss 2.6926
+Epoch 015/030 train | Batch 476/476 (100.0%) | running loss 2.6930
+Epoch 015/030 validasi | Batch 79/79 (100.0%) | running loss 2.9844
+Epoch 015/030 | train 2.6930 | val 2.9844 | lr 2.50e-04 | 152.6s | best
+Epoch 016/030 train | Batch 100/476 (21.0%) | running loss 2.6595
+Epoch 016/030 train | Batch 200/476 (42.0%) | running loss 2.6713
+Epoch 016/030 train | Batch 300/476 (63.0%) | running loss 2.6705
+Epoch 016/030 train | Batch 400/476 (84.0%) | running loss 2.6695
+Epoch 016/030 train | Batch 476/476 (100.0%) | running loss 2.6712
+Epoch 016/030 validasi | Batch 79/79 (100.0%) | running loss 3.0454
+Epoch 016/030 | train 2.6712 | val 3.0454 | lr 2.50e-04 | 153.3s
+Epoch 017/030 train | Batch 100/476 (21.0%) | running loss 2.6329
+Epoch 017/030 train | Batch 200/476 (42.0%) | running loss 2.6459
+Epoch 017/030 train | Batch 300/476 (63.0%) | running loss 2.6511
+Epoch 017/030 train | Batch 400/476 (84.0%) | running loss 2.6557
+Epoch 017/030 train | Batch 476/476 (100.0%) | running loss 2.6545
+Epoch 017/030 validasi | Batch 79/79 (100.0%) | running loss 3.0029
+Epoch 017/030 | train 2.6545 | val 3.0029 | lr 2.50e-04 | 151.1s
+Epoch 018/030 train | Batch 100/476 (21.0%) | running loss 2.6336
+Epoch 018/030 train | Batch 200/476 (42.0%) | running loss 2.6331
+Epoch 018/030 train | Batch 300/476 (63.0%) | running loss 2.6338
+Epoch 018/030 train | Batch 400/476 (84.0%) | running loss 2.6391
+Epoch 018/030 train | Batch 476/476 (100.0%) | running loss 2.6400
+Epoch 018/030 validasi | Batch 79/79 (100.0%) | running loss 3.0128
+Epoch 018/030 | train 2.6400 | val 3.0128 | lr 1.25e-04 | 155.2s
+Epoch 019/030 train | Batch 100/476 (21.0%) | running loss 2.5950
+Epoch 019/030 train | Batch 200/476 (42.0%) | running loss 2.5959
+Epoch 019/030 train | Batch 300/476 (63.0%) | running loss 2.5939
+Epoch 019/030 train | Batch 400/476 (84.0%) | running loss 2.5948
+Epoch 019/030 train | Batch 476/476 (100.0%) | running loss 2.5959
+Epoch 019/030 validasi | Batch 79/79 (100.0%) | running loss 3.0077
+Epoch 019/030 | train 2.5959 | val 3.0077 | lr 1.25e-04 | 150.7s
+Epoch 020/030 train | Batch 100/476 (21.0%) | running loss 2.5661
+Epoch 020/030 train | Batch 200/476 (42.0%) | running loss 2.5658
+Epoch 020/030 train | Batch 300/476 (63.0%) | running loss 2.5753
+Epoch 020/030 train | Batch 400/476 (84.0%) | running loss 2.5786
+Epoch 020/030 train | Batch 476/476 (100.0%) | running loss 2.5842
+Epoch 020/030 validasi | Batch 79/79 (100.0%) | running loss 3.0172
+Epoch 020/030 | train 2.5842 | val 3.0172 | lr 1.25e-04 | 146.4s
+Early stopping: validation loss tidak membaik selama 5 epoch.
+Model terbaik : C:\Users\mazmu\ic_data\runs\exp02_lr5e-4\checkpoints\best_model.pt
+Grafik loss   : C:\Users\mazmu\ic_data\runs\exp02_lr5e-4\results\loss_curve.png

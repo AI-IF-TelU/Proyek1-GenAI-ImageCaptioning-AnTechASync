@@ -1,0 +1,4 @@
+percobaan,epoch_dijalankan,epoch_terbaik,val_loss_terbaik,test_loss,bleu_1,bleu_2,bleu_3,bleu_4,meteor,cider
+"exp01_baseline (lr 1e-3, dropout 0.3)",30,28,2.8945,2.9035,0.4605,0.2737,0.1539,0.0923,0.2962,0.3093
+exp02 (lr 5e-4),20,15,2.9844,3.0091,0.4869,0.2926,0.1709,0.1048,0.2938,0.3593
+exp03 (dropout 0.5),25,20,2.9468,2.9535,0.4871,0.2869,0.1642,0.0994,0.2826,0.3287
