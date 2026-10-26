@@ -7,7 +7,7 @@ Encoder Vanilla CNN dan decoder LSTM (sel ditulis manual) dibangun dan dilatih d
 
 ## Kelompok
 
-**Nama kelompok:** _[isi]_
+**Nama kelompok:** An Tech A Sync
 
 | Anggota | Nama | Peran | Branch |
 |---|---|---|---|

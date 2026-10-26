@@ -1,4 +1,4 @@
-# LOG INTERAKSI LLM - KELOMPOK Image Captioning Backstreet
+# LOG INTERAKSI LLM - KELOMPOK An Tech A Sync
 
 - **Tanggal Sesi:** 23/10/2026
 - **Anggota:** Anggota 3 - Training & Evaluasi
@@ -115,4 +115,4 @@ Contoh ini menunjukkan model sudah menangkap objek dan aktivitas utama dengan ba
 
 ---
 
-**Commit terkait:** `e1d08c1`, `11b2edc`, `eab4799`, `8a146b9`
+**Commit terkait:** `e1d08c1`, `11b2edc`, `eab4799`, `8a146b9` (branch lama). Setelah dipindah ke branch bersih dan di-merge ke `main` lewat PR #6, hash-nya menjadi `e861b39`, `90222d8`, `508cc76`, `cb1a8ce`, `5365e44`.

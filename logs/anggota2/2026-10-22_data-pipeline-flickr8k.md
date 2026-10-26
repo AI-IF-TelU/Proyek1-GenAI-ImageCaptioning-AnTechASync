@@ -1,4 +1,4 @@
-# LOG INTERAKSI LLM - KELOMPOK [Nama Kelompok]
+# LOG INTERAKSI LLM - KELOMPOK An Tech A Sync
 
 - **Tanggal Sesi:** 22/10/2026
 - **Anggota:** Anggota 2 - Data Pipeline & Preprocessing
