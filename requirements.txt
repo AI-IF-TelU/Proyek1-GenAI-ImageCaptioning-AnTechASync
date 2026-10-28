@@ -1,0 +1,6 @@
+# Dependensi aplikasi demo (Streamlit Community Cloud). PyTorch versi CPU agar ringan.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+torchvision==0.29.1+cpu
+streamlit
+pillow

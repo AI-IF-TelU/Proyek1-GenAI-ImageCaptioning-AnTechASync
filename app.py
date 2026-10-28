@@ -4,10 +4,12 @@ Aplikasi web sederhana: upload foto, caption langsung muncul.
 Jalankan dari root repo:
     streamlit run app.py
 
-Checkpoint (best_model.pt) tidak disimpan di GitHub. Aplikasi mencari otomatis di:
+Versi online: Streamlit Community Cloud memakai models/caption_model_exp02.pt (bobot model
+ringkas yang ikut disimpan di GitHub). Aplikasi mencari model otomatis di:
     1. variabel lingkungan CAPTION_CHECKPOINT
-    2. checkpoints/**/best_model.pt di folder repo
-    3. C:/Users/<user>/ic_data/runs/**/best_model.pt
+    2. models/*.pt di folder repo
+    3. checkpoints/**/best_model.pt di folder repo
+    4. C:/Users/<user>/ic_data/runs/**/best_model.pt
 atau isi path-nya manual di sidebar.
 """
 
@@ -32,6 +34,8 @@ def find_checkpoints() -> list[Path]:
     env = os.environ.get("CAPTION_CHECKPOINT")
     if env and Path(env).is_file():
         found.append(Path(env))
+    if (REPO_ROOT / "models").is_dir():
+        found.extend(sorted((REPO_ROOT / "models").glob("*.pt")))
     for root in (REPO_ROOT / "checkpoints", Path.home() / "ic_data" / "runs"):
         if root.is_dir():
             found.extend(sorted(root.rglob("best_model.pt")))
@@ -60,7 +64,11 @@ with st.sidebar:
     st.header("Model")
     options = find_checkpoints()
     if options:
-        labels = [str(p.relative_to(p.parents[2])) if len(p.parents) > 2 else str(p) for p in options]
+        labels = [
+            p.name if p.parent.name == "models"
+            else (str(p.relative_to(p.parents[2])) if len(p.parents) > 2 else str(p))
+            for p in options
+        ]
         choice = st.selectbox("Checkpoint", range(len(options)), format_func=lambda i: labels[i])
         checkpoint = str(options[choice])
     else:
