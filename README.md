@@ -7,7 +7,7 @@ Encoder Vanilla CNN dan decoder LSTM (sel ditulis manual) dibangun dan dilatih d
 
 ## Kelompok
 
-**Nama kelompok:** _[isi]_
+**Nama kelompok:** An Tech A Sync
 
 | Anggota | Nama | Peran | Branch |
 |---|---|---|---|
@@ -150,6 +150,28 @@ evaluasi deterministik dan tidak membutuhkan unduhan resource NLP.
 Gunakan split, seed, dan konfigurasi evaluasi yang sama saat membandingkan training.
 Jangan memilih model berdasarkan test score; gunakan validation loss selama training,
 lalu test score hanya untuk evaluasi akhir checkpoint terbaik.
+
+## Coba model pada foto sendiri
+
+Butuh file checkpoint `best_model.pt` hasil training (tidak disimpan di GitHub, ada di Google Drive `ImageCaptioning/checkpoints/`).
+
+**Aplikasi web (upload foto, caption langsung muncul):**
+
+```bash
+pip install streamlit
+streamlit run app.py
+```
+
+Browser akan membuka `http://localhost:8501`. Pilih atau isi path checkpoint di sidebar, lalu upload foto.
+
+**Lewat command line:**
+
+```bash
+python -m src.predict --checkpoint path/best_model.pt --image foto.jpg
+python -m src.predict --checkpoint path/best_model.pt --image folder_foto/ --save hasil.png
+```
+
+Contoh hasil: `results/demo_caption.png`.
 
 ## System prompt bersama (Bagian Umum)
 

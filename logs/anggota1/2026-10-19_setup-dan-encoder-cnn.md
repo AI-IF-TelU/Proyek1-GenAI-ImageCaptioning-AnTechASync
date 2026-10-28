@@ -1,4 +1,4 @@
-# LOG INTERAKSI LLM - KELOMPOK [Nama Kelompok]
+# LOG INTERAKSI LLM - KELOMPOK An Tech A Sync
 
 - **Tanggal Sesi:** 07/10/2026 - 19/10/2026 (perencanaan), 19/10/2026 (setup dan EncoderCNN)
 - **Anggota:** Mazmur Bryan - Anggota 1 (Ketua, Prompt Engineer & Model)
