@@ -12,9 +12,9 @@ Encoder Vanilla CNN dan decoder LSTM (sel ditulis manual) dibangun dan dilatih d
 | Anggota | Nama | Peran | Branch |
 |---|---|---|---|
 | 1 | Mazmur Bryan | Ketua, Prompt Engineer & Model | `anggota1-model` |
-| 2 | _[isi]_ | Data Pipeline & Preprocessing | `anggota2-data` |
-| 3 | _[isi]_ | Training Loop & Hyperparameter Tuning | `anggota3-training` |
-| 4 | _[isi]_ | Dokumentasi & Error Handler | `anggota4-docs` |
+| 2 | Muhammad Ahsan Raziq Sulthany | Data Pipeline & Preprocessing | `anggota2-data` |
+| 3 | Muhammad Mulnawarman & Zaidan Daffa Abdillah | Training Loop & Hyperparameter Tuning | `anggota3-training` |
+| 4 | All Of Us | Dokumentasi & Error Handler | `anggota4-docs` |
 
 ## Dataset
 
