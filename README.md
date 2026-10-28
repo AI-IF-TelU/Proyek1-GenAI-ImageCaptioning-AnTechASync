@@ -164,6 +164,8 @@ streamlit run app.py
 
 Browser akan membuka `http://localhost:8501`. Pilih atau isi path checkpoint di sidebar, lalu upload foto.
 
+**Versi online (Streamlit Community Cloud):** aplikasi memakai bobot model ringkas `models/caption_model_exp02.pt` (19,5 MB, exp02) yang ikut disimpan di repo, dengan dependensi di `requirements.txt` (PyTorch versi CPU). Deploy dari https://share.streamlit.io dengan repo `steezym/image-captioning`, branch `main`, file `app.py`.
+
 **Lewat command line:**
 
 ```bash

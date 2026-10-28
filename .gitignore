@@ -20,3 +20,6 @@ data/
 *.pth
 checkpoints/
 kaggle.json
+
+# Pengecualian: bobot model ringkas untuk aplikasi demo online
+!models/*.pt
